@@ -19,4 +19,10 @@
         lb $t0, 0($t2)
         beq $t0, 10, isEmpty 
         beq $t0, 0 isEmpty
+	
+	#storing the Base-N number and iniializing new registers
+	addi $s0, $0, 35 
+        addi $t3, $0, 1 
+        addi $t4, $0, 0
+        addi $t5, $0, 0
     
