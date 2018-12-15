@@ -80,5 +80,10 @@
     li $a2, 1 #exponentiated base
     jal DecimalVersion #call to function
     move $a0, $v0 #print result
+    li $v0, 1
+    syscall
+    lw $ra, 0($sp) 
+    addi $sp, $sp, 4 #deallocating the memory
+    jr $ra
 	
     
