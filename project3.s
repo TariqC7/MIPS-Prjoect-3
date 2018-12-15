@@ -76,5 +76,9 @@
     		addi $sp, $sp, -4 #allocating memory for stack
     		sw $ra, 0($sp) #only return address
     		move $a0, $t2
+		li $a1, 3  
+    li $a2, 1 #exponentiated base
+    jal DecimalVersion #call to function
+    move $a0, $v0 #print result
 	
     
