@@ -92,3 +92,10 @@
             syscall
             li $v0, 10 #end
             syscall
+	    
+	 isEmpty:
+            la $a0, noInput #loads string/message
+            li $v0, 4 #prints string
+            syscall
+
+            li $v0, 10 #end of program
