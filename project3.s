@@ -70,5 +70,11 @@
             beq $t0, 32, callconversionfunc
             beq $t1, 5, isTooLong
             j stringLength
+	    
+	 callconversionfunc:
+    		sub $t2, $t2, $t1 #move ptr back to start of string
+    		addi $sp, $sp, -4 #allocating memory for stack
+    		sw $ra, 0($sp) #only return address
+    		move $a0, $t2
 	
     
