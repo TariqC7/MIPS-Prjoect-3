@@ -161,4 +161,9 @@ DecimalVersion:
         lw $s3, 4($sp)
         addi $sp, $sp, 8
         jr $ra
+	
+   return_zero:
+    li $v0, 0
+    lw $ra, 0($sp)
+    lw $s3, 4($sp)
 	   
