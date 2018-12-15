@@ -66,5 +66,9 @@
             addi $t2, $t2, 1
             addi $t1, $t1, 1
             beq $t0, 10, callconversionfunc
+	    beq $t0, 0, callconversionfunc
+            beq $t0, 32, callconversionfunc
+            beq $t1, 5, isTooLong
+            j stringLength
 	
     
