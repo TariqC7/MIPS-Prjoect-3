@@ -130,4 +130,9 @@ DecimalVersion:
     #INSERT THE CODE TO CONVERT BYTE TO DIGIT
     #asciiConversions:
             blt $s3, 48, isInvalid #if char is before 0 in ascii table, the input is invalid
+	    blt $s3, 58, number
+            blt $s3, 65, isInvalid
+            blt $s3, 90, upperCase
+            blt $s3, 97, isInvalid
+            blt $s3, 122, lowerCase
 	   
