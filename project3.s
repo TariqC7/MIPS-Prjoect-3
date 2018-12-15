@@ -28,9 +28,11 @@
 	
 	ignoreSpaces:
             lb $t0, 0($t2) #load address in $t2 to $t0
-            addi $t2, $t2, 1 #increment pointer
-            addi $t1, $t1, 1 #increment counter
-            beq $t0, 32, ignoreSpaces #jump to ignoreSpaces branch if equal
+            addi $t2, $t2, 1 #Increment pointer
+            addi $t1, $t1, 1 #Increment counter
+            beq $t0, 32, ignoreSpaces #Jump to ignoreSpaces branch if equal
+	    beq $t0, 10, isEmpty #Jump to isEmpty branch if equal
+            beq $t0, $0, isEmpty #Jump to isEmpty branch if equal
             
 	
 	
