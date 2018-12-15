@@ -34,6 +34,10 @@
 	    beq $t0, 10, isEmpty #Jump to isEmpty branch if equal
             beq $t0, $0, isEmpty #Jump to isEmpty branch if equal
             
-	
+	checkCharacters:
+            lb $t0, 0($t2)
+            addi $t2, $t2, 1
+            addi $t1, $t1, 1
+            beq $t0, 10, restart
 	
     
