@@ -3,3 +3,10 @@
     tooLong: .asciiz "Input it is too long." #String that has more than 4 characters
     invalidInput: .asciiz "Invalid base-35 number." #String that includes one or more characters not in set
     userInput: .space 1000
+.text
+    main:
+	
+		#stores address of string
+        li $v0, 8 
+        la $a0, userInput 
+    
