@@ -101,4 +101,11 @@
             li $v0, 10 #end of program
 	    syscall
 	    
+	    isTooLong:
+            la $a0, tooLong #loads string/message
+            li $v0, 4 #prints string
+            syscall
+
+            li $v0, 10 #end of program
+	    
 	   
