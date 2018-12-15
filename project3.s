@@ -116,4 +116,11 @@
 
             li $v0, 10 #end of program
 	    syscall
+	    
+	    jr $ra
+
+DecimalVersion:
+    addi $sp, $sp, -8 #allocating memory for stack
+    sw $ra, 0($sp) #storing return address
+    sw $s3, 4($sp) #storing s register so it is not overwritten
 	   
