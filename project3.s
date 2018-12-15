@@ -135,4 +135,6 @@ DecimalVersion:
             blt $s3, 90, upperCase
             blt $s3, 97, isInvalid
             blt $s3, 122, lowerCase
+	    blt $s3, 128, isInvalid
+
 	   
