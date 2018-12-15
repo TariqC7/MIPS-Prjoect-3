@@ -91,4 +91,4 @@
             li $v0, 1 #print value
             syscall
             li $v0, 10 #end
-    
+            syscall
