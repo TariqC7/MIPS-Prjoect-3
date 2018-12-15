@@ -149,6 +149,13 @@ DecimalVersion:
             jal More
     #mul $s3, $s3, $a2 #multiplying the byte x the exponentiated base (starts at 1(35^0 = 1))
     #mul $a2, $a2, 35 #multiplying the exoonentiated base by 35 to get next power (35^1 ...)
+    More:
+        mul $s3, $s3, $a2 #multiplying the byte x the exponentiated base (starts at 1(35^0 = 1))
+        mul $a2, $a2, 35 #multiplying the exponentiated base by 35 to get next power (35^1 ...)
+        jal DecimalVersion
+    # a0=str addr, a1=strlen, a2=exponentiated base
     
+    #jal DecimalVersion #call function again (loop)
+        add $v0, $s3, $v0   #returning last byte plus decimal version of the rest of number
 
 	   
