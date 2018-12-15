@@ -6,7 +6,11 @@
 .text
     main:
 	
-		#stores address of string
+	#stores address of string
         li $v0, 8 
         la $a0, userInput 
+	li $a1, 1000 
+        syscall
+        add $t0, $0, 0 #initialize $t0 register
+        add $t1, $0, 0 #initialize $t1 register
     
