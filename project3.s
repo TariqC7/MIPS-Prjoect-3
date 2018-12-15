@@ -143,6 +143,12 @@ DecimalVersion:
    lowerCase:
             addi $s3, $s3, -87
             jal More	    
+	    
+   number:
+            addi $s3, $s3, -48
+            jal More
+    #mul $s3, $s3, $a2 #multiplying the byte x the exponentiated base (starts at 1(35^0 = 1))
+    #mul $a2, $a2, 35 #multiplying the exoonentiated base by 35 to get next power (35^1 ...)
     
 
 	   
