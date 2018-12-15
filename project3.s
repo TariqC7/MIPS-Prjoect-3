@@ -99,3 +99,6 @@
             syscall
 
             li $v0, 10 #end of program
+	    syscall
+	    
+	   
