@@ -140,5 +140,9 @@ DecimalVersion:
     upperCase:
             addi $s3, $s3, -55
             jal More
+   lowerCase:
+            addi $s3, $s3, -87
+            jal More	    
+    
 
 	   
