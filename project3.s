@@ -13,4 +13,10 @@
         syscall
         add $t0, $0, 0 #initialize $t0 register
         add $t1, $0, 0 #initialize $t1 register
+	
+	#Doing a check for an empty string
+        la $t2, userInput 
+        lb $t0, 0($t2)
+        beq $t0, 10, isEmpty 
+        beq $t0, 0 isEmpty
     
